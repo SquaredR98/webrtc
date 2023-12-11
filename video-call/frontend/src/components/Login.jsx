@@ -29,14 +29,14 @@ export default function Login() {
     }
     if (isError) {
       console.log(error);
-      if (Array.isArray(error.data.error)) {
-        error.data.error.forEach((el) =>
-          toast.error(el.message, {
+      if (Array.isArray(error?.data?.error)) {
+        error?.data?.error?.forEach((el) =>
+          toast?.error(el?.message, {
             position: "top-right",
           })
         );
       } else {
-        toast.error(error.data.error, {
+        toast.error(error?.data?.error, {
           position: "top-right",
         });
       }

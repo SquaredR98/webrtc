@@ -7,7 +7,7 @@ const { info } = require('console');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ allowedHeaders: "*", origin: "*" }));
 app.use(express.json());
 
 const expressServer = http.createServer(app);

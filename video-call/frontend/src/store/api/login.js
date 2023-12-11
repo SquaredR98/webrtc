@@ -5,7 +5,7 @@ import { setLocalStorage } from '../../utils/localStorage';
 const userLoginApi = createApi({
   reducerPath: "loginUser",
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000'
+    baseUrl: ' https://fac6-121-243-82-214.ngrok-free.app'
   }),
   endpoints(builder) {
     return {

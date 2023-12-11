@@ -20,7 +20,10 @@ const initialState = {
   shareScreen: false,
   haveMedia: false, // Track if there is a local stream or not
   haveCreatedOffer: false,
-  offeredTo: null
+  haveCreatedAnswer: false,
+  offeredTo: null,
+  offer: null,
+  haveGottenIce: false,
 }
 
 export const callStatusSlice = createSlice({

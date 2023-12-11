@@ -18,7 +18,6 @@ export default function AudioButton({ callStatus }) {
   // Click Handler for
   const startOrStopAudio = () => {
     // 1. Check if the audio is enabled, if so disable it.
-    console.log(callStatus);
     if (callStatus.audio === "enabled") {
       dispatch(updateCallStatus({ key: "audio", value: "disabled" }));
       streams.localStream.stream.getAudioTracks().forEach((track) => {
@@ -31,7 +30,6 @@ export default function AudioButton({ callStatus }) {
         track.enabled = true;
       });
     } else {
-      console.log("Reaching here always");
       // 4. There are possibility, we don't have media, wait for the media and then enable it.
       // setPendingUpdate(true);
       startAudioStream(streams);
